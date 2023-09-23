@@ -9,7 +9,7 @@
 
 nav {
   height: 80px;
-  background-color: rgb(77 155 200);
+  background-color: #f85a40;
   display: flex;
   align-items: center;
   position: fixed;
@@ -18,6 +18,7 @@ nav {
   right: 0;
   justify-content: space-between;
   padding: 0px 50px 0px 100px;
+  z-index: 100;
   /* border: 1px solid #fff; */
 }
 
@@ -26,14 +27,15 @@ nav .logo {
   color: #fff;
   font-weight: 600;
 }
-_m-divider--vertical_1bo7b_258 {
+._m-divider--vertical_1bo7b_258 {
     border: none;
-    border-right: 1px solid #fff;
-    height: 28px;
-    margin: 0 24px 0 8px;
+    border-right: 2px solid #fff;
+    /* height: 28px; */
+    margin: 10px 24px 0 8px;
 }
 hr {
     display: block;
+    color: #fff;
     unicode-bidi: isolate;
     margin-block-start: 0.5em;
     margin-block-end: 0.5em;
@@ -48,8 +50,6 @@ hr {
 nav ul {
   display: flex;
   list-style: none;
-  /* align-items: center;
-  justify-content: space-between; */
 }
 nav ul li {
   margin: 20px 10px;
@@ -60,7 +60,6 @@ nav ul li a {
   font-size: 20px;
   font-weight: 800;
   letter-spacing: 1px;
-  /* background-color: #fff; */
   padding: 8px 10px;
   border-radius: 10px;
   transition: all 0.5s ease;
@@ -82,10 +81,10 @@ nav ul li a {
 nav ul li a.active,
 nav ul li a:hover {
   background-color: #fff;
-  color: black;
+  color: #064b44;
 }
 .fa-bell:hover {
-  color:#000
+  color:#064b44;
 }
 nav .menu-btn i {
   color: #fff;
