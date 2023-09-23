@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  box-sizing: border-box;
+}
+
+nav {
+  height: 80px;
+  background-color: rgb(77 155 200);
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  justify-content: space-between;
+  padding: 0px 50px 0px 100px;
+  /* border: 1px solid #fff; */
+}
+
+nav .logo {
+  font-size: 33px;
+  color: #fff;
+  font-weight: 600;
+}
+_m-divider--vertical_1bo7b_258 {
+    border: none;
+    border-right: 1px solid #fff;
+    height: 28px;
+    margin: 0 24px 0 8px;
+}
+hr {
+    display: block;
+    unicode-bidi: isolate;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    overflow: hidden;
+    border-style: inset;
+    border-width: 2px;
+    margin: 10px 20px 0px 10px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  /* align-items: center;
+  justify-content: space-between; */
+}
+nav ul li {
+  margin: 20px 10px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  /* background-color: #fff; */
+  padding: 8px 10px;
+  border-radius: 10px;
+  transition: all 0.5s ease;
+}
+
+.fa-bell {
+  color: #fff;
+  font-size: 23px;
+}
+
+.profile {
+  width: 75px;
+  height: 64px;
+  border-radius: 50%;
+  position: relative;
+  top: 10px;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+  background-color: #fff;
+  color: black;
+}
+.fa-bell:hover {
+  color:#000
+}
+nav .menu-btn i {
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+
+#click {
+  display: none;
+}
+
+@media (max-width: 850px) {
+
+    nav{
+        z-index: 99;
+    }
+  nav ul {
+    position: fixed;
+    top: 80px;
+    /* left: 0%; */
+    right: -100%;
+    background-color: rgb(77 155 200);
+    height: auto;
+    width: 100%;
+    display: block;
+    text-align: center;
+    transition: all 0.2s ease;
+    z-index: 99;
+  }
+
+  #click:checked ~ ul {
+    right: 0%;
+  }
+
+  #click:checked ~ .menu-btn i:before {
+    content: "\f00d";
+  }
+
+  nav ul li {
+    margin: 2px 0px;
+  }
+  nav ul li a {
+    font-size: 23px;
+    display: inline-block;
+  }
+
+  nav ul li a.active,
+  nav ul li a:hover {
+    background: none;
+    color: #000;
+  }
+
+  nav .menu-btn i {
+    display: block;
+  }
+
+  nav {
+    padding: 0px 30px 0px 20px;
+  }
+  .profile{
+    margin:20px;
+  }
+
+}
