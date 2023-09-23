@@ -10,7 +10,7 @@ app.use(morgan('combined'));
 app.use(parser.json());
 app.use(parser.urlencoded({extended:true}));
 
-app.use(express.static(path.join(__dirname,'..','public')));
+app.use(express.static(path.join(__dirname,'public')));
 
 app.get('/',(req,res)=>{
     res.sendFile(path.join(__dirname,'public','index.html'));
@@ -64,9 +64,9 @@ app.use((err, req, res, next) => {
     console.error(err.stack)
     res.status(500).send('Something broke !')
 })
-app.get('/*',(req,res)=>{
-  res.status(400).json({
-      "error":"The page does not exists"
-  })
-})
+// app.get('/*',(req,res)=>{
+//   res.status(400).json({
+//       "error":"The page does not exists"
+//   })
+// })
 module.exports= app;

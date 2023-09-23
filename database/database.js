@@ -10,12 +10,14 @@ const connection = mysql.createConnection({
     database: "user_database"
 });
 
-connection.connect(function(error){
-    if (error) throw error
-    else console.log("connected to the database successfully!");
+const con = async ()=>{
+    await connection.connect(function(error){
+        if (error) throw error
+        else console.log("connected to the database successfully!");
+    });
 
-   
-});
+}
+
 
 function getUsers(){
     //will get users from db
@@ -52,6 +54,7 @@ function createUser(){
 // }
 
 module.exports = {
+    con,
     connection,
     getUsers,
     getUser,
