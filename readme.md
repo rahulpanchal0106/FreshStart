@@ -15,8 +15,8 @@ List the key features of your app. This can include functionalities like:
 You must have node.js installed in your environment, as well as the MySQL server.
 
 ## Getting Started
-clone this repository on your machine and run <mark>npm install</mark> to install all the required libraries.
-after that run <mark>npm start</mark> to start the server.
+clone this repository on your machine and run **npm install** to install all the required libraries.
+after that run **npm start** to start the server.
 Go to the url given in the console (e.g. http://localhost:8000)
 
 ### NOTE
