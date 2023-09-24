@@ -4,167 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile</title>
+    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./profilesec.css">
-   
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="shortcut icon" href="pictures/logo.png" type="image/x-icon" />
     <style>
       .container{
         margin-top: 70px;
       }
-      @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
-
-* {
-  padding: 0;
-  margin: 0;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  box-sizing: border-box;
-}
-
-/* body {
-  background-color: grey;
-} */
-
-nav {
-  height: 80px;
-  background-color: rgb(77 155 200);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0px 50px 0px 100px;
-  /* border: 1px solid #fff; */
-}
-
-nav .logo {
-  font-size: 33px;
-  color: #fff;
-  font-weight: 600;
-}
-
-nav ul {
-  display: flex;
-  list-style: none;
-  /* align-items: center;
-  justify-content: space-between; */
-}
-nav ul li {
-  margin: 20px 10px;
-}
-nav ul li a {
-  text-decoration: none;
-  color: #fff;
-  font-size: 20px;
-  font-weight: 800;
-  letter-spacing: 1px;
-  /* background-color: #fff; */
-  padding: 8px 10px;
-  border-radius: 10px;
-  transition: all 0.5s ease;
-}
-
-.fa-bell {
-  color: #fff;
-  font-size: 23px;
-}
-
-
-
-.profile {
-  width: 75px;
-  height: 64px;
-  border-radius: 50%;
-}
-
-nav ul li a.active,
-nav ul li a:hover {
-  background-color: #fff;
-  color: black;
-}
-.fa-bell:hover {
-  color:#000
-}
-nav .menu-btn i {
-  color: #fff;
-  font-size: 22px;
-  cursor: pointer;
-  display: none;
-}
-
-#click {
-  display: none;
-}
-
-@media (max-width: 850px) {
-  nav ul {
-    position: fixed;
-    top: 80px;
-    /* left: 0%; */
-    right: -100%;
-    background-color: rgb(77 155 200);
-    height: 90vh;
-    width: 100%;
-    display: block;
-    text-align: center;
-    transition: all 0.2s ease;
-  }
-
-  #click:checked ~ ul {
-    right: 0%;
-  }
-
-  #click:checked ~ .menu-btn i:before {
-    content: "\f00d";
-  }
-
-  nav ul li {
-    margin: 40px 0px;
-  }
-  nav ul li a {
-    font-size: 23px;
-    display: inline-block;
-  }
-
-  nav ul li a.active,
-  nav ul li a:hover {
-    background: none;
-    color: #000;
-  }
-
-  nav .menu-btn i {
-    display: block;
-  }
-
-  nav {
-    padding: 0px 30px 0px 20px;
-  }
-}
+      .logoimage{
+        max-width: 60px;
+      }
+      .row{
+        margin: 15px;
+      }
     </style>
 </head>
 <body>
-    
-              <nav>
-                <div class="logo"><img src="pictures/logo.png">Fresh<span> Start</span></div>
-                <input type="checkbox" id="click" />
-                <label for="click" class="menu-btn">
-                  <i class="fa fa-bars"></i>
-                </label>
-                <ul>
-                  <li><a href="#" class="active">Home</a></li>
-                  <li><a href="#">QnA</a></li>
-                  <li><a href="#">Resources</a></li>
-                  <li><a href="#">Placement Cell</a></li>
-                  <li>
-                    <a href="#"><i class="fa fa-bell"></i></a>
-                  </li>
-                  <hr class="_m-divider--vertical_1bo7b_258">
-                  <img class="profile" src="pictures/profile.jpeg" alt="profile" />
-                </ul>
-              </nav>
-              <br>
-              <br>
+    <nav>
+      <div class="logo"><img class="logoimage" src="pictures/logo.png" style="max-width: 60px;">Fresh<span> Start</span></div>
+      <input type="checkbox" id="click" />
+      <label for="click" class="menu-btn">
+        <i class="fa fa-bars"></i>
+      </label>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="QNA1.html">QnA</a></li>
+        <li><a href="resourses.html">Resources</a></li>
+        <li><a href="placement.html">Placement Cell</a></li>
+        <li>
+          <a href="notification.html"><i class="fa fa-bell"></i></a>
+        </li>
+        <hr class="_m-divider--vertical_1bo7b_258">
+        <a href="profile.hbs"><img class="profile" src="pictures/profile.jpeg" alt="profile" /></a>
+      </ul>
+    </nav>
+    <br>
+    <br>       
     <div class="container">
         <div class="main-body">
               
@@ -225,9 +102,7 @@ nav .menu-btn i {
                         <div class="col-sm-3">
                           <h6 class="mb-0">About Me</h6>
                         </div>
-                        <div class="col-sm-9 text-secondary">
-                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui delectus, ducimus consectetur voluptate perspiciatis quasi, quas unde quam alias molestiae voluptatibus ab! Temporibus itaque repellendus blanditiis magni qui officia sed!
-                        </div>
+                        <div class="col-sm-9 text-secondary"></div>
                       </div>
                       <hr>
                       <div class="row">
@@ -286,7 +161,7 @@ nav .menu-btn i {
                       <hr>
                       <div class="row">
                         <div class="col-sm-12">
-                          <a class="btn btn-info " target="__blank" href="https://www.bootdey.com/snippets/view/profile-edit-data-and-skills">Edit</a>
+                          <a class="btn btn-info " href="editprofile.html">Edit</a>
                         </div>
                       </div>
                     </div>

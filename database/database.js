@@ -4,30 +4,30 @@ const dotenv = require('dotenv')
 dotenv.config()
 
 const connection = mysql.createConnection({
-    host: process.env.host,//"localhost",
-    user: process.env.user,//"root",
-    password: process.env.password,// "pass123",
-    database: process.env.database,//"user_database"
+    host: process.env.host,
+    user: process.env.user,
+    password: process.env.password,
+    database: process.env.database,
 });
 
-const con = async ()=>{
-    await connection.connect(function(error){
-        if (error) throw error
-        else console.log("connected to the database successfully!");
-    });
 
-}
+connection.connect(function(error){
+    if (error) throw error
+    else console.log("connected to the database successfully!");
+});
 
 
-function getUsers(){
-    //will get users from db
-}
-function getUser(id){
-    //will get only one user
-}
-function createUser(){
 
-}
+
+// function getUsers(){
+//     //will get users from db
+// }
+// function getUser(id){
+//     //will get only one user
+// }
+// function createUser(){
+
+// }
 
 
 // async function getUsers() {
@@ -54,9 +54,6 @@ function createUser(){
 // }
 
 module.exports = {
-    con,
     connection,
-    getUsers,
-    getUser,
-    createUser
+   
 }
