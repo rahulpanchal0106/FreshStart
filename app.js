@@ -2,6 +2,7 @@ const express = require('express');
 const morgan = require('morgan');
 const path = require('path');
 const parser = require('body-parser');
+
 // const exphbs = require('express-handlebars');
 const { connection} = require('./database/database.js');
 const app = express();
@@ -58,15 +59,13 @@ app.post('/registration',(req,res)=>{
 
 
 // app.engine('hbs', exphbs({ extname: 'hbs' }));
-app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, 'views'));
+// app.set('view engine', 'ejs');
+// app.set('views', path.join(__dirname, 'views'));
 
 app.get('/profile',(req,res)=>{
     const sql = 'SELECT * FROM userData';
     connection.query(sql, (err, results) => {
       if (err) throw err;
-  
-      // Render the template with the data and send it to the client
       res.render('profile', { data: results });
     })
 });
@@ -75,59 +74,96 @@ app.get('/registration',(req,res)=>{
     res.sendFile(path.join(__dirname,'public','registration.html'));
 });
 
-app.get('/home',(req,res)=>{
-    res.sendFile(path.join(__dirname,'public','index.html'));
+// app.get('/home',(req,res)=>{
+//     res.sendFile(path.join(__dirname,'public','index.html'));
+// });
+
+// app.get('/qna',(req,res)=>{
+//     var sql = "select * from "
+//     res.sendFile(path.join(__dirname,'public','qna.html'));
+// })
+
+// app.post('/qna',(req,res)=>{
+//     // const question = req.body.question;
+//     // console.log(question,":Question");
+//     const answer = req.body.answer;
+//     const question_id=2;
+//     const senior_name = "xyz";
+//     var sql = "INSERT INTO answers(answer_text,question_id,senior_name) VALUES('"+answer+"','"+question_id+"','"+senior_name+"') ";
+//     connection.query(sql,function(error,result){
+        
+//         if (error) throw error;
+//         res.redirect('/qna');
+//     })
+//     res.json({
+//         "Answer":answer,
+//     });
+
+// })
+
+// app.get('/qna', (req, res) => {
+//     // const questionId = 123; 
+
+//     // res.render('qna.ejs', { questionId: questionId });
+//     res.sendFile(path.join(__dirname,'public','qnaChat.html'));
+// });
+
+app.get("/chat", (req, res) => {
+    
+	res.sendFile(path.join(__dirname ,"src/index.html"));
+
 });
 
-app.get('/ask',(req,res)=>{
-    res.sendFile(path.join(__dirname,'public','QNA1.html'));
-})
 
-app.post('/ask', async (req, res) => {
-    const { studentName, question } = req.body;
-  
-    try {
-      const [rows] = await connection.execute(
-        'INSERT INTO questions (student_name, question_text) VALUES (?, ?)',
-        [studentName, question]
-      );
-  
-      res.redirect('/qna'); // Redirect to the QnA page or a success page
-    } catch (error) {
-      console.error(error);
-      res.status(500).send('Internal Server Error');
-    }
-});
 
-app.get('/question/:id', async (req, res) => {
-    const questionId = req.params.id;
+
+
+// app.post('/ask',(req, res) => {
+//     const { studentName, question } = req.body;
   
-    try {
-      const [questionsRows] = await connection.execute(
-        'SELECT * FROM questions WHERE id = ?',
-        [questionId]
-      );
+//     try {
+//       const [rows] =  connection.execute(
+//         'INSERT INTO questions (student_name, question_text) VALUES (?, ?)',
+//         [studentName, question]
+//       );
   
-      const [commentsRows] = await connection.execute(
-        'SELECT * FROM comments WHERE question_id = ?',
-        [questionId]
-      );
+//       res.redirect('/qna'); // Redirect to the QnA page or a success page
+//     } catch (error) {
+//       console.error(error);
+//       res.status(500).send('Internal Server Error');
+//     }
+// });
+
+// app.get('/question/:id', async (req, res) => {
+//     const questionId = req.params.id;
   
-      const question = questionsRows[0];
-      const comments = commentsRows;
+//     try {
+//       const [questionsRows] = await connection.execute(
+//         'SELECT * FROM questions WHERE id = ?',
+//         [questionId]
+//       );
   
-      res.render('question', { question, comments });
-    } catch (error) {
-      console.error(error);
-      res.status(500).send('Internal Server Error');
-    }
-  });
+//       const [commentsRows] = await connection.execute(
+//         'SELECT * FROM comments WHERE question_id = ?',
+//         [questionId]
+//       );
+  
+//       const question = questionsRows[0];
+//       const comments = commentsRows;
+  
+//       res.render('question', { question, comments });
+//     } catch (error) {
+//       console.error(error);
+//       res.status(500).send('Internal Server Error');
+//     }
+//   });
   
 
 
 // app.get('/home', isAuthenticated, (req, res) => {
 //     res.send('This is a protected route!');
 //   });
+
 
 app.post('/',(req,res)=>{
     console.log(req.body);

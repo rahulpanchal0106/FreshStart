@@ -13,8 +13,13 @@
     text-decoration: none;
   }
   
-  .tablr a {
+  .table a {
     color: blue !important;
+  }
+  
+  .start {
+    width: 80%;
+    margin: 0px auto;
   }
   
   .post-content {
@@ -113,4 +118,69 @@
     color: #8dc63f;
     font-size: 12px;
     margin-left: 20px;
+  }
+  
+  .askq {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    margin: 10px auto;
+    border-radius: 5px;
+  }
+  
+  .person {
+    position: relative;
+    bottom: 30px;
+    height: 71px !important;
+  }
+  
+  .pro {
+    flex-basis: 100% !important;
+  }
+  
+  .btn-primary {
+    border: 1px solid #f85a40 !important;
+    background-color: #f85a40 !important;
+  }
+  
+  .post {
+    display: inline-block;
+    /* width: 400px; */
+    font-family: "Lexend", sans-serif;
+  }
+  
+  .post-image {
+    display: block;
+    width: 100%;
+  }
+  
+  .post-ratings-container {
+    display: flex;
+    /* justify-content: end; */
+    padding: 12px 0;
+  }
+  
+  .post-rating {
+    display: flex;
+    align-items: center;
+    cursor: default;
+  }
+  
+  .post-rating:not(:last-child) {
+    margin-right: 12px;
+  }
+  
+  .post-rating-selected > .post-rating-button,
+  .post-rating-selected > .post-rating-count {
+    color: #009578;
+  }
+  
+  .post-rating-button {
+    margin-right: 6px;
+    cursor: pointer;
+    color: #555555;
+  }
+  
+  .post-rating:not(.post-rating-selected) > .post-rating-button:hover {
+    color: #000000;
   }
