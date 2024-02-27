@@ -23,3 +23,9 @@ Go to the url given in the console (e.g. http://localhost:8000)
 ### NOTE
 The App is still in developing phase. So, it may not work accordingly.
 
+### Snapshots
+![edit_profile](public/assets/img/edit_profile.jpg)
+
+![Qna_page](public/assets/img/Qna_page.jpg)
+
+![placement_cell](public/assets/img/placement_cell.jpg)
