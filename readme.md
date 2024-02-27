@@ -3,6 +3,7 @@
 ## Overview
 Platform for students transitioning from lower to higher semesters.
 
+![home_page](public/assets/img/home_page.jpg)
 
 
 ## Features
