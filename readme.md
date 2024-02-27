@@ -3,6 +3,7 @@
 ## Overview
 Platform for students transitioning from lower to higher semesters.
 
+![home_page](public/assets/img/home_page.jpg)
 
 
 ## Features
@@ -22,3 +23,9 @@ Go to the url given in the console (e.g. http://localhost:8000)
 ### NOTE
 The App is still in developing phase. So, it may not work accordingly.
 
+### Snapshots
+![edit_profile_page](public/assets/img/edit_profile_page.jpg)
+
+![Qna_page](public/assets/img/Qna_page.jpg)
+
+![Placement_cell](public/assets/img/Placement_cell.jpg)
